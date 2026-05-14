@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frederico Moraes Batista - Serviços de Pré-impressão e Edição</title>
+    
+    <!-- Meta tags para SEO e Google -->
+    <meta name="description" content="FREDERICO MORAES BATISTA - Especialista em serviços de pré-impressão, edição de cadastros, produção fotográfica e ensino de arte. Atendimento em Teresina/PI. CNPJ: 58.927.660/0001-00">
+    <meta name="keywords" content="pré-impressão, edição de cadastros, produção fotográfica, ensino de arte, impressão personalizada, Teresina, Piauí">
+    <meta name="author" content="FREDERICO MORAES BATISTA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Frederico Moraes Batista - Soluções Criativas e Gráficas">
+    <meta property="og:description" content="Serviços profissionais de pré-impressão, fotografia, edição e muito mais em Teresina-PI">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fef9e6;
+            color: #3d2b1a;
+        }
+
+        /* Cabeçalho - Paleta Amarela e Tons Terrosos */
+        header {
+            background-color: #d4a017;
+            background: linear-gradient(135deg, #f4c430 0%, #d4a017 100%);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            color: #2c1a0e;
+            font-size: 28px;
+            font-weight: 800;
+            text-shadow: 1px 1px 2px rgba(255,255,200,0.5);
+        }
+
+        .logo span {
+            color: #fff5e0;
+            font-weight: 700;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu a {
+            color: #2c1a0e;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #fff5e0;
+            transform: translateY(-2px);
+        }
+
+        .btn-header {
+            background-color: #2c1a0e;
+            color: #f4c430 !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700 !important;
+        }
+
+        .btn-header:hover {
+            background-color: #1f1108;
+            color: #ffde6e !important;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(212,160,23,0.92), rgba(244,196,48,0.85)), url('https://images.unsplash.com/photo-1562329267-1ec3e44bfa7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #2c1a0e;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(255,245,224,0.8);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2c1a0e;
+            color: #f4c430 !important;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background-color: #1f1108;
+            transform: scale(1.05);
+            color: #ffde6e !important;
+        }
+
+        /* Seções */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #b8860b;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6b4c2c;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cards de Serviços */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fffef7;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+            border-bottom: 4px solid #f4c430;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(212,160,23,0.2);
+            border-bottom: 4px solid #d4a017;
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #b8860b;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #5a3e28;
+            line-height: 1.6;
+        }
+
+        /* Abas de Serviços Específicos */
+        .servicos-especificos {
+            background-color: #fff3df;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tab {
+            background-color: #fff5e8;
+            border: 1px solid #f4c430;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #b8860b;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .tab:hover, .tab.active {
+            background-color: #f4c430;
+            color: #2c1a0e;
+            border-color: #d4a017;
+        }
+
+        .servicos-grid-2 {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .servicos-grid-2.active {
+            display: grid;
+        }
+
+        .servico-item {
+            background: #fffef7;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-left: 4px solid #f4c430;
+        }
+
+        .servico-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(212,160,23,0.15);
+        }
+
+        .servico-img {
+            width: 100%;
+            height: 150px;
+            background-color: #ffefd0;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b8860b;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .servico-item h4 {
+            color: #b8860b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .servico-item p {
+            color: #5a3e28;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .btn-small {
+            background-color: #f4c430;
+            color: #2c1a0e;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            display: inline-block;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-small:hover {
+            background-color: #d4a017;
+            color: #fff5e0;
+        }
+
+        /* Diferenciais */
+        .diferenciais {
+            background-color: #fffef7;
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .diferencial {
+            text-align: center;
+        }
+
+        .diferencial .emoji {
+            font-size: 40px;
+            background-color: #fff0d6;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            color: #d4a017;
+        }
+
+        .diferencial h4 {
+            color: #b8860b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .diferencial p {
+            color: #5a3e28;
+        }
+
+        /* Localização */
+        .localizacao {
+            background-color: #fff3df;
+            padding: 60px 5%;
+        }
+
+        .local-box {
+            background: #fffef7;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 5px solid #f4c430;
+        }
+
+        .local-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .local-info h3 {
+            color: #b8860b;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .local-info p {
+            color: #5a3e28;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .local-info strong {
+            color: #d4a017;
+        }
+
+        .mapa-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 2px solid #f4c430;
+        }
+
+        .mapa-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .btn-mapa {
+            display: inline-block;
+            background-color: #f4c430;
+            color: #2c1a0e;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .btn-mapa:hover {
+            background-color: #d4a017;
+            color: #fff5e0;
+        }
+
+        .btn-mapa.google {
+            background-color: #2c1a0e;
+            color: #f4c430;
+        }
+
+        .btn-mapa.google:hover {
+            background-color: #1f1108;
+            color: #ffde6e;
+        }
+
+        /* Políticas */
+        .politicas {
+            background-color: #fff5ea;
+            padding: 60px 5%;
+        }
+
+        .politicas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .politica-card {
+            background: #fffef7;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border-right: 3px solid #f4c430;
+        }
+
+        .politica-card h3 {
+            color: #b8860b;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #f4c430;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .politica-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .politica-content h4 {
+            color: #d4a017;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        .politica-content p {
+            color: #5a3e28;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2c1a0e;
+            color: #ffefd0;
+            padding: 50px 5% 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: #f4c430;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #ffe0b5;
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: #f4c430;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social a {
+            background-color: #d4a017;
+            color: #2c1a0e;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social a:hover {
+            background-color: #f4c430;
+            color: #1f1108;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #d4a017;
+            color: #e6c28f;
+            font-size: 14px;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            line-height: 70px;
+            box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+            transition: 0.3s;
+            z-index: 999;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5c;
+            transform: scale(1.1);
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c1a0e;
+            color: #ffefd0;
+            padding: 15px;
+            text-align: center;
+            z-index: 9998;
+            display: none;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        .cookie-banner button {
+            background: #f4c430;
+            color: #2c1a0e;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            margin-left: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cookie-banner button:hover {
+            background: #ffde6e;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .mapa-container {
+                height: 350px;
+            }
+            
+            .politicas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>🍪 Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa Política de Privacidade e Termos de Uso.</p>
+        <button onclick="acceptCookies()">Aceitar</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Frederico Moraes <span>Batista</span></h1>
+        </div>
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#politicas">Políticas</a>
+            <a href="https://wa.me/558698657651?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-header" target="_blank">📱 WHATSAPP</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <h2>Soluções Criativas em Pré-impressão, Fotografia e Arte</h2>
+        <p>Pré-impressão | Edição de cadastros | Fotografia profissional | Ensino de arte | Produtos gráficos personalizados</p>
+        <p style="font-size: 18px; margin-top: 20px;">📍 Teresina - PI | Atendimento especializado para empresas e pessoas físicas.</p>
+        <a href="https://wa.me/558698657651?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20criativos." class="btn" target="_blank">
+            📱 FALE CONOSCO PELO WHATSAPP
+        </a>
+    </section>
+
+    <!-- Serviços Principais -->
+    <section id="servicos" class="container">
+        <h2 class="section-title">Nossas Atividades</h2>
+        <p class="section-subtitle">Soluções completas para comunicação visual, produção gráfica e expressão artística.</p>
+        
+        <div class="servicos-grid">
+            <div class="card">
+                <div class="card-icon">🖨️</div>
+                <h3>Pré-impressão</h3>
+                <p>Arte-finalização, preparação de arquivos, provas digitais e todo o processo antes da impressão final.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Edição de Cadastros</h3>
+                <p>Organização e edição profissional de listas, diretórios e produtos gráficos editoriais.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📸</div>
+                <h3>Produção Fotográfica</h3>
+                <p>Fotografia profissional para empresas, produtos, eventos e ensaios (exceto aérea e submarina).</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Ensino de Arte e Cultura</h3>
+                <p>Oficinas, cursos e mentorias em artes visuais e técnicas criativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Específicos com Abas (Atividades secundárias e complementares) -->
+    <section id="servicos-especificos" class="servicos-especificos">
+        <div class="container">
+            <h2 class="section-title">Especialidades Detalhadas</h2>
+            <p class="section-subtitle">Conheça todo o portfólio de soluções criativas e empresariais.</p>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="openTab(event, 'todos')">Todos</button>
+                <button class="tab" onclick="openTab(event, 'graficos')">Gráfico & Pré-impressão</button>
+                <button class="tab" onclick="openTab(event, 'foto')">Fotografia & Arte</button>
+                <button class="tab" onclick="openTab(event, 'editorial')">Editorial & Cadastros</button>
+                <button class="tab" onclick="openTab(event, 'diversos')">Produtos Diversos</button>
+            </div>
+
+            <div id="todos" class="servicos-grid-2 active">
+                <div class="servico-item"><div class="servico-img">🖥️</div><h4>Pré-impressão completa</h4><p>Preparação de arquivos, provas, ajuste de cores e imposição.</p><a href="https://wa.me/558698657651?text=Olá!%20Gostaria%20de%20orçamento%20para%20pré-impressão." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">📇</div><h4>Edição de Listas e Diretórios</h4><p>Organização de cadastros, diretórios empresariais e dados.</p><a href="https://wa.me/558698657651?text=Olá!%20Quero%20editar%20listas%20e%20cadastros." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">📘</div><h4>Produtos Gráficos Editoriais</h4><p>Livretos, catálogos, revistas e materiais institucionais.</p><a href="https://wa.me/558698657651?text=Olá!%20Preciso%20de%20produto%20gráfico%20editorial." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">📷</div><h4>Fotografia Profissional</h4><p>Ensaios, produtos, corporativo e cobertura de eventos.</p><a href="https://wa.me/558698657651?text=Olá!%20Quero%20saber%20sobre%20serviço%20fotográfico." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">🎭</div><h4>Ensino de Arte e Cultura</h4><p>Cursos de arte, design e expressão cultural personalizados.</p><a href="https://wa.me/558698657651?text=Tenho%20interesse%20nos%20cursos%20de%20arte." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">🖨️</div><h4>Impressão para outros usos</h4><p>Materiais promocionais, adesivos, banners e personalizados.</p><a href="https://wa.me/558698657651?text=Preciso%20de%20impressão%20personalizada." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">🏷️</div><h4>Fabricação diversos</h4><p>Brindes, produtos promocionais e artigos não especificados.</p><a href="https://wa.me/558698657651?text=Quero%20produtos%20diversos%20personalizados." class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">🤝</div><h4>Serviços para empresas</h4><p>Consultoria e soluções B2B, atendimento personalizado.</p><a href="https://wa.me/558698657651?text=Olá,%20tenho%20uma%20empresa%20e%20preciso%20de%20parceria." class="btn-small" target="_blank">Consultar</a></div>
+            </div>
+            <div id="graficos" class="servicos-grid-2">
+                <div class="servico-item"><div class="servico-img">🎨</div><h4>Arte-finalização digital</h4><p>Preparação de arquivos para gráficas rápidas.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Orçamento</a></div>
+                <div class="servico-item"><div class="servico-img">📏</div><h4>Prova de cor & ajuste</h4><p>Garantia de fidelidade de cores na impressão.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Orçamento</a></div>
+            </div>
+            <div id="foto" class="servicos-grid-2">
+                <div class="servico-item"><div class="servico-img">📸</div><h4>Ensaios Fotográficos</h4><p>Retratos, casamentos, eventos sociais.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Agendar</a></div>
+                <div class="servico-item"><div class="servico-img">🏺</div><h4>Oficinas de Arte</h4><p>Aulas de pintura, desenho e criatividade.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Inscreva-se</a></div>
+            </div>
+            <div id="editorial" class="servicos-grid-2">
+                <div class="servico-item"><div class="servico-img">🗂️</div><h4>Cadastros e Listas</h4><p>Edição, padronização e formatação de dados.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Consultar</a></div>
+                <div class="servico-item"><div class="servico-img">📖</div><h4>Diagramação de Livretos</h4><p>Criação visual para materiais institucionais.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Consultar</a></div>
+            </div>
+            <div id="diversos" class="servicos-grid-2">
+                <div class="servico-item"><div class="servico-img">🧸</div><h4>Brindes Personalizados</h4><p>Fabricação de itens promocionais.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Pedido</a></div>
+                <div class="servico-item"><div class="servico-img">📦</div><h4>Produtos Gráficos sob demanda</h4><p>Etiquetas, envelopes, pastas e outros.</p><a href="https://wa.me/558698657651" class="btn-small" target="_blank">Consultar</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="container diferenciais">
+        <h2 class="section-title">Por que escolher nosso trabalho?</h2>
+        <div class="diferenciais-grid">
+            <div class="diferencial"><div class="emoji">✨</div><h4>Atendimento Personalizado</h4><p>Entendemos sua necessidade e criamos soluções sob medida.</p></div>
+            <div class="diferencial"><div class="emoji">⚡</div><h4>Agilidade Criativa</h4><p>Prazos rápidos sem perder qualidade e precisão.</p></div>
+            <div class="diferencial"><div class="emoji">🎯</div><h4>Foco no Resultado</h4><p>Projetos alinhados aos seus objetivos de negócio ou artísticos.</p></div>
+            <div class="diferencial"><div class="emoji">🏅</div><h4>Experiência</h4><p>Ampla atuação nas áreas de pré-impressão, fotografia e editoração.</p></div>
+        </div>
+    </section>
+
+    <!-- Localização - Google Meu Negócio -->
+    <section id="localizacao" class="localizacao">
+        <div class="local-box">
+            <div class="local-info">
+                <h3>📍 Frederico Moraes Batista</h3>
+                <p><strong>Endereço:</strong> R Vinte Quatro de Janeiro, 1200 - Nossa Senhora das Graças</p>
+                <p><strong>CEP:</strong> 64.018-650 - Teresina - PI</p>
+                <p><strong>Telefone:</strong> (86) 9865-7651 | <strong>Email:</strong> FREDERICOMBT@GMAIL.COM</p>
+                <p><strong>CNPJ:</strong> 58.927.660/0001-00</p>
+            </div>
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.071185742892!2d-42.80801472453764!3d-5.092500755221438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e39a6f8dfd615%3A0x2c1a8e24ed54c2a!2sR.%20Vinte%20e%20Quatro%20de%20Janeiro%2C%201200%20-%20Nossa%20Sra.%20das%20Gra%C3%A7as%2C%20Teresina%20-%20PI%2C%2064018-650!5e0!3m2!1spt-BR!2sbr!4v1709500000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://wa.me/558698657651?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." class="btn-mapa" target="_blank">📱 WHATSAPP</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=R+Vinte+Quatro+de+Janeiro+1200+Teresina" class="btn-mapa google" target="_blank">🗺️ VER NO GOOGLE MAPS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Políticas -->
+    <section id="politicas" class="politicas">
+        <div class="politicas-grid">
+            <div class="politica-card"><h3>Política de Privacidade</h3><div class="politica-content"><h4>1. Coleta de Informações</h4><p>Coletamos dados como nome, e-mail, telefone e endereço para prestação de serviços de pré-impressão, fotografia e consultoria.</p><h4>2. Uso e Compartilhamento</h4><p>As informações são usadas apenas para fins operacionais, não sendo vendidas ou compartilhadas com terceiros sem consentimento.</p><h4>3. Segurança e Cookies</h4><p>Utilizamos cookies para melhor navegação. Você pode desabilitar. Medidas de segurança protegem seus dados.</p><h4>4. Direitos LGPD</h4><p>Você pode solicitar correção ou exclusão dos dados via e-mail: privacidade@fredericombatista.com</p><p><em>Última atualização: março/2026</em></p></div></div>
+            <div class="politica-card"><h3>Term
